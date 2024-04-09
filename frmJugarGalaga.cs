@@ -23,24 +23,26 @@ namespace prySotoMariaLujan
         private PictureBox nave;
         private PictureBox pelota;
         private PictureBox[] enemigos;
-        private System.Windows.Forms.Timer timer;
+        private Timer timer;
+        clsNave objNave;
 
         private void InicializarJuego()
         {
 
-            // Configuración del formulario
+            // Config formulario
             this.ClientSize = new Size(800, 600);
 
-            // Configuración de la nave
-            nave = new PictureBox();
-            nave.Image = Properties.Resources.nave;
-            nave.Size = new Size(100, 100);
-            nave.SizeMode = PictureBoxSizeMode.StretchImage;
-            nave.Location = new Point((this.ClientSize.Width - nave.Width) / 2, this.ClientSize.Height - nave.Height - 20); //ubico la posicion de la nave envX e Y 
-            nave.BackColor = Color.Transparent;
-            this.Controls.Add(nave); //se agrega el objeto al codigo para poder ser dibujado
+            // Config nave - mover a clase Nave
+            //nave = new PictureBox();
+            //nave.Image = Properties.Resources.nave;
+            //nave.Size = new Size(100, 100);
+            //nave.SizeMode = PictureBoxSizeMode.StretchImage;
+            //nave.Location = new Point((this.ClientSize.Width - nave.Width) / 2, this.ClientSize.Height - nave.Height - 20); //ubico la posicion de la nave envX e Y 
+            //nave.BackColor = Color.Transparent;
+            //this.Controls.Add(nave); //se agrega el objeto al codigo para poder ser dibujado
 
-            // Configuración de la pelota
+
+            // Config pelota
             pelota = new PictureBox();
             pelota.Image = Properties.Resources.pelota;
             pelota.Size = new Size(40, 40);
@@ -50,7 +52,8 @@ namespace prySotoMariaLujan
             pelota.BackColor = Color.Transparent;
             this.Controls.Add(pelota);
 
-            // Configuración de los enemigos
+
+            // Config enemigos - hacer posicionamientos aleatorio y usa list
             enemigos = new PictureBox[8];
             int x = 10;
             for (int i = 0; i < enemigos.Length; i++)
@@ -63,10 +66,11 @@ namespace prySotoMariaLujan
                 enemigos[i].BackColor = Color.Transparent;
                 this.Controls.Add(enemigos[i]);
                 x += 100;
-            }
+            } //añadir movimiento y sus balas
+
 
             // Configuración del temporizador
-            timer = new System.Windows.Forms.Timer();
+            timer = new Timer();
             timer.Interval = 20; // Intervalo de actualización del juego (en milisegundos)
             timer.Tick += timer1_Tick;
             timer.Start();
@@ -78,6 +82,12 @@ namespace prySotoMariaLujan
 
         private void frmJugarGalaga_Load(object sender, EventArgs e)
         {
+            objNave = new clsNave();
+            objNave.crearNave();
+            objNave.nave.Location = new Point((this.ClientSize.Width - objNave.nave.Width) / 2, this.ClientSize.Height - objNave.nave.Height - 20); //ubico la posicion de la nave envX e Y 
+            this.Controls.Add(objNave.nave); //se agrega el objeto al codigo para poder ser dibujado
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -112,13 +122,13 @@ namespace prySotoMariaLujan
         {
             if (e.KeyCode == Keys.Left)// Movimiento de la nave con las flechas 
             {
-                if (nave.Left > 0) //controlo que no se salga del borde izq del form, caso contrario no se mueve más
-                    nave.Left -= 10; //mueve 10pxl
+                if (objNave.nave.Left > 0) //controlo que no se salga del borde izq del form, caso contrario no se mueve más
+                    objNave.nave.Left -= 10; //mueve 10pxl
             }
             else if (e.KeyCode == Keys.Right)
             {
-                if (nave.Right < this.ClientSize.Width)
-                    nave.Left += 10;
+                if (objNave.nave.Right < this.ClientSize.Width)
+                    objNave.nave.Left += 10;
             }
 
             if (e.KeyCode == Keys.Space) // Disparo de la pelota
@@ -133,10 +143,16 @@ namespace prySotoMariaLujan
             if (!pelota.Visible)
             {
                 // Posición inicial de la pelota
-                pelota.Left = nave.Left + nave.Width / 2 - pelota.Width / 2; //establezco la pos horizontal d la pelota respecto a la nave
-                pelota.Top = nave.Top - pelota.Height; // establezco la pos vert de la pelota justo sobre l nave
+                pelota.Left = objNave.nave.Left + objNave.nave.Width / 2 - pelota.Width / 2; //establezco la pos horizontal d la pelota respecto a la nave
+                pelota.Top = objNave.nave.Top - pelota.Height; // establezco la pos vert de la pelota justo sobre l nave
                 pelota.Visible = true;
             }
+        }
+        private void DisparoEnemigos()
+        {
+            
+                
+            
         }
     }
 }

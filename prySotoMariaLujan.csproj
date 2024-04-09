@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsNave.cs" />
     <Compile Include="frmDibujo.cs">
       <SubType>Form</SubType>
     </Compile>
