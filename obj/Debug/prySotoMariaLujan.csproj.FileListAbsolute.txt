@@ -11,3 +11,4 @@ C:\Users\lujis\source\repos\prySotoMariaLujan\obj\Debug\prySotoM.ACCC61B9.Up2Dat
 C:\Users\lujis\source\repos\prySotoMariaLujan\obj\Debug\prySotoMariaLujan.exe
 C:\Users\lujis\source\repos\prySotoMariaLujan\obj\Debug\prySotoMariaLujan.pdb
 C:\Users\lujis\source\repos\prySotoMariaLujan\obj\Debug\prySotoMariaLujan.frmDibujo.resources
+C:\Users\lujis\Source\Repos\prySotoMariaLujan\obj\Debug\prySotoMariaLujan.frmJugarGalaga.resources

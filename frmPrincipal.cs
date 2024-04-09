@@ -40,5 +40,13 @@ namespace prySotoMariaLujan
             frmDibujo.Show();
             this.Hide();
         }
+
+        private void jugarGálagaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmJugarGalaga frmJugarGalaga = new frmJugarGalaga();
+            frmJugarGalaga.Show();
+            this.Hide();
+
+        }
     }
 }

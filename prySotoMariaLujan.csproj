@@ -56,6 +56,12 @@
     <Compile Include="frmDibujo.Designer.cs">
       <DependentUpon>frmDibujo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJugarGalaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJugarGalaga.Designer.cs">
+      <DependentUpon>frmJugarGalaga.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDibujo.resx">
       <DependentUpon>frmDibujo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJugarGalaga.resx">
+      <DependentUpon>frmJugarGalaga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -102,6 +111,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-transparent-computer-icons-statistics-chart-statistics-miscellaneous-infographic-angle-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoDG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelota.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

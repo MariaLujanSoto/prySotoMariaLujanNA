@@ -63,9 +63,49 @@ namespace prySotoMariaLujan.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemigo {
+            get {
+                object obj = ResourceManager.GetObject("enemigo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoDG {
+            get {
+                object obj = ResourceManager.GetObject("fondoDG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gratis_png_space_invaders_extreme_2_icono_de_videojuego_archivo_space_invaders {
             get {
                 object obj = ResourceManager.GetObject("gratis-png-space-invaders-extreme-2-icono-de-videojuego-archivo-space-invaders", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nave {
+            get {
+                object obj = ResourceManager.GetObject("nave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pelota {
+            get {
+                object obj = ResourceManager.GetObject("pelota", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

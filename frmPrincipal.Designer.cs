@@ -63,6 +63,7 @@
             this.jugarGálagaToolStripMenuItem.Name = "jugarGálagaToolStripMenuItem";
             this.jugarGálagaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.jugarGálagaToolStripMenuItem.Text = "Jugar Gálaga";
+            this.jugarGálagaToolStripMenuItem.Click += new System.EventHandler(this.jugarGálagaToolStripMenuItem_Click);
             // 
             // estadísticasToolStripMenuItem
             // 
